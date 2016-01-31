@@ -433,4 +433,4 @@ th {
  * Remove list style.
  */
 
- ol, ul { list-style: none; }
+ ol, ul { list-style: none; padding: 0; margin: 0; }
