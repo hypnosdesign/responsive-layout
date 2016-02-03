@@ -62,12 +62,6 @@ hr {
 	border-top: 1px solid #EEE;
 }
 
-hr.bottomhead {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
-}
-
 .selected, a:hover {
 	color: #888;
 }
@@ -147,6 +141,16 @@ main.portfolio {
 
 article {
 	margin-bottom: 3.5em;
+	position: relative;
+}
+
+.icon-prj {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	z-index: 500;
+	border-radius: 0 0 0 25%;
+	background-color: #fff;
 }
 
 
@@ -159,6 +163,48 @@ article {
 	border-radius: 10%;
 }
 
+
+
+/**************************
+	page: CONTACT
+---------------------------
+***************************/
+
+.primary {
+	margin-bottom: 3em;
+}
+.col {
+	text-align: left;
+}
+
+.contact-wrap {
+	padding: 1em 6%;
+	background-color: #fff;
+}
+
+.contact li a {
+  min-height: 30px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  padding: 0 0 0 40px;
+  margin: 0 0 10px;
+}
+
+.contact li.phone a {
+  background-image: url(../icons/phone.png);
+}
+
+.contact li.mail a {
+  background-image: url(../icons/message.png);
+}
+
+.contact li.twitter a {
+  background-image: url(../icons/twitter.png);
+}
+
+.contact li.facebook a {
+  background-image: url(../icons/facebook.png);
+}
 
 
 
@@ -197,6 +243,10 @@ footer {
 .unghia .btop {
 	float: right;
 	font-size: 0.9em;
+}
+
+.secondary-nav {
+	display: none;
 }
 
 /**************************
@@ -266,6 +316,23 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 		background-color: transparent;
 	}
 
+	.icon-prj {
+		position: absolute;
+		top:0px;
+		right:0px;
+	}
+
+	.secondary-nav {
+	display: visible;
+}
+
+
+
+	/**************************
+	page: PORTFOLIO
+	---------------------------
+	***************************/
+
 	main.portfolio {
 		max-width: 90%;
 		margin: 0 auto;
@@ -282,9 +349,28 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 		font-size: .9em;
 	}
 
-	article:nth-child(6){
-		clear: both;
+
+	/**************************
+	page: CONTACT
+	---------------------------
+	***************************/
+
+	.primary {
+		width: 60%;
+		float: left;
 	}
+
+	.secondary {
+		width: 40%;
+		float: left;
+		padding-left: 10%
+	}
+
+
+	/**************************
+	FOOTER
+	---------------------------
+	***************************/
 
 	.btop {
 		display: none;
@@ -297,6 +383,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 		font-size: .9em;
 		font-weight: 700;
 		color: #4A4A4A;
+		display: inherit;
 		
 	}
 	.secondary-nav li{
@@ -339,16 +426,18 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 		font-size: 1.2em;
 	}
 
+	.img-profile {
+		width: 40%;
+		margin: .5 1em .5em .5em;
+	}
+
 	article {
 		float: left;
 		width: 33%;
 		padding: .8em;
 	}
 
-	.img-profile {
-		width: 40%;
-		margin: .5 1em .5em .5em;
-	}
+
 
 
 }
