@@ -7,7 +7,12 @@
 body #FAFAFA
 ********************/
 
+ 			
+
+/*TEST*/ /** { border: 1px solid red; }	*/
+
 * {
+
 	box-sizing: border-box;
 }
 
@@ -15,11 +20,30 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	background-color: #FAFAFA;
+	margin-top: 340px;
+	color: #4A4A4A;
 }
 
 .wrapper {
-	max-width: 95%;
+	max-width: 100%;
 	margin: 0 auto;
+}
+
+header {
+		width: 100%;
+		background-color: #FAFAFA;
+		margin-top: 0;
+		padding: 1em 6% 0;
+		position: fixed;
+		top: 0;
+		z-index: 999;
+
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 1.2em;
+	margin: 3em 0 4em;
 }
 
 img {
@@ -29,17 +53,36 @@ img {
 a {
 	text-decoration: none;
 	display: block;
+	color: #4A4A4A;
 }
 
+hr {
+	border: 0;
+	height: 0;
+	border-top: 1px solid #EEE;
+}
+
+hr.bottomhead {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
+}
+
+.selected, a:hover {
+	color: #888;
+}
 
 
 /**************************
 	HEADING
 ---------------------------
 ***************************/
+
 .main-title {
-	font-size: 2.5em;
+	font-size: 2em;
 	font-weight: 700;
+	margin: 0;
+	padding:0;
 } 
 
 
@@ -51,7 +94,8 @@ a {
 
 .main-nav {
 	display: block;
-	margin-bottom: 3em;
+	margin: 2em 0;
+	padding: 6%;
 }
 
 .main-nav li {
@@ -64,7 +108,7 @@ a {
 	text-transform: uppercase;
 	font-size: 1.1em;
 	font-weight: 700;
-	color: #4A4A4A;
+
 }
 
 
@@ -74,6 +118,10 @@ a {
 ---------------------------
 ***************************/
 
+.hero {
+	padding: 0 6% 2em;
+}
+
 .img-profile {
 	width: 200px;
 }
@@ -81,7 +129,8 @@ a {
 .hero p {
 	font-weight: 400;
 	font-size: 1.1em;
-	line-height: 1.5em;
+	line-height: 1.6em;
+	margin-top: 2em;
 }
 
 
@@ -90,9 +139,85 @@ a {
 ---------------------------
 ***************************/
 
-.porfolio {
+main.portfolio {
 	background-color: #FFF;
+	padding: 2em 6%;
 }
+
+
+article {
+	margin-bottom: 3.5em;
+}
+
+
+/**************************
+	page: PORTFOLIO
+---------------------------
+***************************/
+
+.round {
+	border-radius: 10%;
+}
+
+
+
+
+/**************************
+	FOOTER
+---------------------------
+***************************/
+
+footer {
+	padding: 1.6em 6%;
+}
+
+.contact {
+	margin: 2em 0;
+	font-size: 1.2em;
+
+}
+.contact li {
+	margin: .8em 0;
+}
+
+.contact a {
+	display: inline-block;
+	font-weight: 700;
+	padding-left: 12px;
+}
+.contact span{
+	display: inline-block;
+}
+
+.unghia p {
+	float: left;
+	font-weight: 700;
+}
+
+.unghia .btop {
+	float: right;
+	font-size: 0.9em;
+}
+
+/**************************
+	UTILITIES
+---------------------------
+***************************/
+
+																/* 
+micro clearfix by Nicolas Gallagher
+http://nicolasgallagher.com/micro-clearfix-hack/ 
+																*/
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/* uppercase class */
+.up {
+	text-transform: uppercase;
+}
+
+
 
 
 
@@ -104,12 +229,129 @@ a {
 
 @media (min-width: 768px){
 
+/*	test. 
+
 	body {
-		background-color: #ddd;
+			background-color: #ddd;
+		} */
+
+	body {
+		margin-top: 141px;
 	}
+
+	.hero {
+		padding: 4em 6%;
+	}
+
+	.hero p {
+		text-align: left;
+	}
+
+	.img-profile {
+		float: right;
+		width: 300px;
+		margin-left: 30px;
+	}
+
+	.main-nav {
+		margin: 0;
+		padding: 1em 0;
+	}
+
+	.main-nav li {
+	display: inline-block;
+	}
+
+	.main-nav li a {
+		background-color: transparent;
+	}
+
+	main.portfolio {
+		max-width: 90%;
+		margin: 0 auto;
+		padding: 1em 1em 3em;
+	}
+
+	article {
+		float: left;
+		width: 50%;
+		padding: .8em;
+	}
+
+	article p {
+		font-size: .9em;
+	}
+
+	article:nth-child(6){
+		clear: both;
+	}
+
+	.btop {
+		display: none;
+	}
+	
+	.secondary-nav {
+		float: right;
+		margin: 1em 0;
+		text-transform: uppercase;
+		font-size: .9em;
+		font-weight: 700;
+		color: #4A4A4A;
+		
+	}
+	.secondary-nav li{
+		float: left;
+		margin-left: 2em;
+	}
+
+
 
 }
 
+
+@media (min-width: 1024px){
+
+/*	test.
+
+	body {
+			background-color: #ddd;
+		} */
+
+	body { margin-top: 80px;}
+
+	.main-title, .main-nav {
+		margin: 0;
+		padding: 0;
+	}
+	.main-title {
+		float: left;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		float: left;
+	}
+
+	.hero p {
+		font-size: 1.2em;
+	}
+
+	article {
+		float: left;
+		width: 33%;
+		padding: .8em;
+	}
+
+	.img-profile {
+		width: 40%;
+		margin: .5 1em .5em .5em;
+	}
+
+
+}
 
 
 
