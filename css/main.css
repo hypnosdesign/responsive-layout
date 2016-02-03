@@ -262,7 +262,6 @@ footer {
 
 .cf:before, .cf:after { content: " "; display: table; }
 .cf:after { clear: both; }
-.cf { *zoom: 1; }
 
 /* uppercase class */
 
@@ -418,7 +417,7 @@ footer {
 
 	.img-profile {
 		width: 40%;
-		margin: .5 1em .5em .5em;
+		margin: 0.5em 1em 0.5em 0.5em;
 	}
 
 	article {
@@ -428,44 +427,3 @@ footer {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
